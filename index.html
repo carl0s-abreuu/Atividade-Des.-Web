@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espaço do Estudante</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="etiqueta">ATIVIDADE ESCOLAR • HTML, CSS E JAVASCRIPT</p>
+      <h1>Espaço do Estudante</h1>
+      <p>Cadastre estudantes e organize as informações da sua turma.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="titulo-formulario">
+      <span class="etapa">01 / FORMULÁRIO</span>
+      <h2 id="titulo-formulario">Cadastrar estudante</h2>
+      <p class="descricao">Preencha todos os campos para adicionar um estudante.</p>
+      <form id="formulario">
+        <div class="campos">
+          <div>
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" placeholder="Ex.: Ana Souza" required maxlength="80">
+          </div>
+          <div>
+            <label for="turma">Turma</label>
+            <input id="turma" name="turma" placeholder="Ex.: 2º A" required maxlength="30">
+          </div>
+          <div>
+            <label for="curso">Curso</label>
+            <input id="curso" name="curso" placeholder="Ex.: Informática" required maxlength="60">
+          </div>
+        </div>
+        <div class="botoes">
+          <button type="submit">Cadastrar estudante</button>
+          <button type="reset" class="secundario">Limpar campos</button>
+        </div>
+      </form>
+      <p id="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="titulo-tabela">
+      <span class="etapa">02 / TABELA</span>
+      <h2 id="titulo-tabela">Estudantes cadastrados <span id="total" class="contador">0</span></h2>
+      <div class="tabela-rolagem">
+        <table>
+          <caption>Dados dos estudantes e opção para excluir cada cadastro.</caption>
+          <thead><tr><th scope="col">Nome</th><th scope="col">Turma</th><th scope="col">Curso</th><th scope="col">Ação</th></tr></thead>
+          <tbody id="corpo-tabela"></tbody>
+        </table>
+      </div>
+      <p id="tabela-vazia" class="vazio">Nenhum estudante cadastrado. Comece pelo formulário acima.</p>
+    </section>
+
+    <section aria-labelledby="titulo-lista">
+      <span class="etapa">03 / LISTAGEM</span>
+      <h2 id="titulo-lista">Lista de estudantes</h2>
+      <p class="descricao">Os mesmos cadastros, apresentados em uma lista simples.</p>
+      <ul id="lista-estudantes"></ul>
+      <p id="lista-vazia" class="vazio">Os nomes aparecerão aqui após o cadastro.</p>
+    </section>
+    <p class="nota">Demonstração escolar: os cadastros ficam apenas nesta página e são apagados ao recarregar.</p>
+  </main>
+  <footer>Espaço do Estudante · Aprender, cadastrar e organizar.</footer>
+</body>
+</html>
